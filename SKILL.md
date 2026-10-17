@@ -1,5 +1,6 @@
 ---
 name: file-refine-organizer
+version: 1.1.0
 description: 文件夹/项目资料精细化整理的完整方法论。当用户要求「整理XX文件夹/项目/资料」「检查整理好没有」「把散件归并」「统一命名」「拆分合订PDF/付款申请/采购报销」「查重」时使用本技能。覆盖：先查规则与记忆再动手、摸全貌再动手、五类问题诊断（合订PDF/散件/命名/缺目录层/重复）、合订PDF四步拆分法、事项文件夹命名模板、MD5+目视双轨查重、删除先进暂存区、台账同步、知识沉淀。基建资料库九类分层与资金台账场景既有惯例内含于此。
 agent_created: true
 ---
@@ -107,7 +108,7 @@ agent_created: true
 | `split_pdf.py`      | 按页区间拆分（`insert_pdf`）＋页数合计/首页文本双校验；页区间表在脚本头部 `JOBS` 改      |
 | `to_recycle_bin.py` | Windows 回收站删除（SHFileOperationW + FOF_ALLOWUNDO），批量去重暂存区专用 |
 
-运行环境：任意 Python 3.10+ 虚拟环境（**禁全局 pip**；PyMuPDF 装 venv 内）。Windows 回收站删除仅 `to_recycle_bin.py` 需要。
+运行环境：`C:/Users/LCZ/.workbuddy/binaries/python/envs/default/Scripts/python.exe`（禁全局 pip）。
 
 ## 详细参考
 
