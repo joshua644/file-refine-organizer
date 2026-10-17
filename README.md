@@ -3,6 +3,9 @@
 > 文件夹 / 项目资料精细化整理技能（Agent Skill）——把「整理一下」从随手归拢升级为可复现的七步流程。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](./CHANGELOG.md)
+
+**当前版本 v1.1.0**（2026-10-17）——版本号同步维护于三处：`SKILL.md` frontmatter 的 `version` 字段、本徽章、[CHANGELOG.md](./CHANGELOG.md)（每次变更记录内容）；Git 侧每个版本一个 tag（`git tag` / GitHub Releases）。**装了旧版的，更新时先看 CHANGELOG 确认差异，再 `git pull` 换新版。**
 
 ## 这是什么
 
@@ -82,7 +85,8 @@ Step 0 的实质动作（读目标库 `AGENTS.md`／知识目录／记忆文件�
 
 ```
 file-refine-organizer/
-├── SKILL.md                     # 技能主文件（铁律＋七步流程）
+├── SKILL.md                     # 技能主文件（铁律＋七步流程＋version 字段）
+├── CHANGELOG.md                 # 版本更新日志（升级前先看这里）
 ├── references/
 │   └── 整理细则与案例.md         # 命名模板出处、四步拆分细节、查重判据表、台账坑、实证案例
 └── scripts/
