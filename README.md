@@ -22,7 +22,7 @@
 ## 七步流程
 
 ```
-Step 0 宪法三查 → Step 1 摸全貌找惯例 → Step 2 诊断五类问题
+Step 0 查规则与记忆 → Step 1 摸全貌找惯例 → Step 2 诊断五类问题
 → Step 3 列清单 AskUserQuestion 确认 → Step 4 执行（拆分/归并/改名/查重）
 → Step 5 终态校验（0 散件＋事项文件夹）→ Step 6 台账同步与沉淀
 ```
@@ -49,6 +49,16 @@ git clone https://github.com/joshua644/file-refine-organizer.git ~/.workbuddy/sk
 
 任何采用「技能目录 + SKILL.md」结构的平台（如 Claude Code 的 `~/.claude/skills/`）均可使用：把本仓库放到技能目录下即可。`SKILL.md` 头部 frontmatter 含 `name` / `description` 触发声明，各平台按自身规范读取。
 
+## 依赖与可选增强
+
+| 类型 | 内容 | 说明 |
+|---|---|---|
+| 硬依赖 | 无 | 本技能自包含，零外部技能依赖即可完整运行 |
+| 脚本依赖 | `PyMuPDF`（pip，装虚拟环境内，禁全局 pip） | 仅拆分／检查合订 PDF 时需要 |
+| 可选增强 | 宪法审查类技能（如 `skills-constitution`） | Step 0 装了则按其流程执行三查；没装则读文件等效生效，不中断 |
+
+Step 0 的实质动作（读目标库 `AGENTS.md`／知识目录／记忆文件）是纯文件操作——任何「技能目录 + SKILL.md」结构的平台，clone 下来就能用。
+
 ## 使用
 
 触发语（任一句即可）：
@@ -66,7 +76,7 @@ git clone https://github.com/joshua644/file-refine-organizer.git ~/.workbuddy/sk
 | `scripts/split_pdf.py` | 按页区间拆分（`insert_pdf`）＋页数合计／首页文本双校验；页区间表在脚本头部 `JOBS` 改 |
 | `scripts/to_recycle_bin.py` | Windows 回收站删除（SHFileOperationW + FOF_ALLOWUNDO），批量清暂存区专用 |
 
-依赖：`pip install PyMuPDF`（装虚拟环境内，禁全局 pip）。
+脚本依赖：`pip install PyMuPDF`（装虚拟环境内，禁全局 pip），仅拆分／检查合订 PDF 时需要；另两个脚本只用 Python 标准库（`to_recycle_bin.py` 仅 Windows 有效）。
 
 ## 目录结构
 
